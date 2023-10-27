@@ -10,6 +10,7 @@ public class enemy : MonoBehaviour
     public LayerMask groundLayer;
     public bool facingRight = true;
     public EdgeCollider2D visaoInimigo;
+    private bool bateunaparede;
    
 
     // Start is called before the first frame update
@@ -25,9 +26,10 @@ public class enemy : MonoBehaviour
         ground = Physics2D.Linecast(groundCheck.position, transform.position, groundLayer);
         Debug.Log(ground);
 
-        if (ground == false)
+        if (ground == false ||bateunaparede)
         {
             speed *= -1;
+            bateunaparede = false;
         }
 
         if (speed > 0 && !facingRight)
@@ -51,13 +53,19 @@ public class enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player"&& !collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
         {
             collision.gameObject.GetComponent<movievyolence>().setplayermorte(false);  
         }
+        else if (collision.tag == "Player"&& collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<CapsuleCollider2D>(), GetComponent<CapsuleCollider2D>());
+        }
+        if (collision.tag == "parede") bateunaparede = true;
+        
 
-                
-            
+
+
     }
 }
 
