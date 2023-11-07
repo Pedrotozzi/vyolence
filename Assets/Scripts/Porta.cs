@@ -9,11 +9,13 @@ public class Porta : MonoBehaviour
     private SpriteRenderer spriteRender;
     public bool taAberta;
     private BoxCollider2D colider;
+    public GameObject portafrente;
     // Start is called before the first frame update
     void Start()
     {
         spriteRender = GetComponent<SpriteRenderer>();
         colider = GetComponent<BoxCollider2D>();
+        portafrente.SetActive (false);
     }
 
     // Update is called once per frame
@@ -26,17 +28,20 @@ public class Porta : MonoBehaviour
         else
         {
             PortaFechada();
+
         }
     }
     public void PortaFechada()
     {
         spriteRender.sprite = portaNormal;
         colider.enabled = true;
+        portafrente.SetActive(false);
     }
     public void PortaAberta()
     {
         spriteRender.sprite = portaAberta;
         colider.enabled = false;
+        portafrente.SetActive(true);
     }
 
 

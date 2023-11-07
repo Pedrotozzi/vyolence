@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4183508880280324082}
   - component: {fileID: 4183508880280324081}
   - component: {fileID: 3121891180266651775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RedCrate pequena
   m_TagString: parede
   m_Icon: {fileID: 0}

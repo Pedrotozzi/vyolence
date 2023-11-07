@@ -14,7 +14,7 @@ public class movievyolence : MonoBehaviour
     public bool taNoChao;
     public Transform detectaChao;
     public LayerMask oQueEhChao;
-    public bool naescada;
+    public bool naescada = false;
     public float velocidadeescada;
     public bool taNaCaixa = false;
     public bool podeEntrarNaCaixa;
@@ -114,21 +114,24 @@ public class movievyolence : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "escada")
-        {
+        
+        if (collision.gameObject.CompareTag("escada"))
+        {        
             naescada = true;
             rb.gravityScale = 0;
-
+            return;
         }
         if (collision.gameObject.CompareTag("caixa"))           
         {
             podeEntrarNaCaixa = true;
             caixaatual = collision.gameObject.GetComponent<Caixa>();
+            return;
         }
         if (collision.gameObject.CompareTag("porta"))
         {
             podeAbrirAPorta = true;
             portaatual = collision.gameObject.GetComponent<Porta>();
+            return;
         }
 
     }
@@ -138,17 +141,19 @@ public class movievyolence : MonoBehaviour
         {
             naescada = false;
             rb.gravityScale = gravidadeinicial;
-
+            return;
         }
         if (collision.gameObject.CompareTag("caixa"))
         {
             podeEntrarNaCaixa = false;
             caixaatual = null;
+            return;
         }
         if (collision.gameObject.CompareTag("porta"))
         {
             podeAbrirAPorta = false;
             portaatual = null;
+            return;
         }
     }
 
