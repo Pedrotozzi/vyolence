@@ -24,7 +24,7 @@ public class movievyolence : MonoBehaviour
     public Porta portaatual;
     public bool podeAbrirAPorta;
     public float gravidadeinicial;
-
+    public bool podeEntrarNaEscada;
 
     private bool playerControling = true;
 
@@ -58,6 +58,10 @@ public class movievyolence : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta)
         {
             portaatual.taAberta = !portaatual.taAberta;
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaEscada)
+        {
+            entrarnaescada();
         }
 
         taNoChao = Physics2D.OverlapCircle(detectaChao.position, 0.2f, oQueEhChao);
@@ -116,9 +120,8 @@ public class movievyolence : MonoBehaviour
     {
         
         if (collision.gameObject.CompareTag("escada"))
-        {        
-            naescada = true;
-            rb.gravityScale = 0;
+        {   
+            podeEntrarNaEscada = true;
             return;
         }
         if (collision.gameObject.CompareTag("caixa"))           
@@ -139,25 +142,33 @@ public class movievyolence : MonoBehaviour
     {
         if (collision.tag == "escada")
         {
-            naescada = false;
-            rb.gravityScale = gravidadeinicial;
-            return;
+            podeEntrarNaEscada = false;
+            sairdaescada();
         }
         if (collision.gameObject.CompareTag("caixa"))
         {
             podeEntrarNaCaixa = false;
             caixaatual = null;
-            return;
+            
         }
         if (collision.gameObject.CompareTag("porta"))
         {
             podeAbrirAPorta = false;
             portaatual = null;
-            return;
+            
         }
+        
     }
-
-
+    private void entrarnaescada()
+    {
+        rb.gravityScale = 0;
+        naescada = true;
+    }
+    private void sairdaescada()
+    {
+        rb.gravityScale = gravidadeinicial;
+        naescada = false;
+    }
 
     public void AlternarEntradaNaCaixa()
     {

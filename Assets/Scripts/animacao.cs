@@ -27,14 +27,18 @@ public class animacao : MonoBehaviour
         if (this.jogador.naescada == true)
         {
             this.animator.SetBool("escada", true);
-            animator.StopPlayback();
-            if (Mathf.Abs(this.jogador.rb.velocity.y) != 0)
+            if ((this.jogador.rb.velocity.y > 0) || (this.jogador.rb.velocity.y < 0))
             {
-                animator.Play("Vyolence_escada");
+                this.animator.SetBool("paradaescada", false);
+            }
+            else if (this.jogador.rb.velocity.y == 0)
+            {
+                this.animator.SetBool("paradaescada", true);
             }
         }
         else if (this.jogador.naescada == false)
         {
+            this.animator.SetBool("paradaescada", false);
             this.animator.SetBool("escada", false);
         }
         
@@ -62,7 +66,7 @@ public class animacao : MonoBehaviour
         }
         {
             float velocidadeY = this.rb.velocity.y;
-            if ((velocidadeY > 0) && !(jogador.taNoChao))
+            if ((velocidadeY > 0) && !(jogador.taNoChao) && !(jogador.naescada)) 
             {
                 this.animator.SetBool("pulando", true);
                 this.animator.SetBool("caindo", false);
