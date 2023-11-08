@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3210052970544299853}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,9 @@ GameObject:
   - component: {fileID: 3210052970931421561}
   - component: {fileID: 3210052970931421540}
   - component: {fileID: 3210052970931421543}
-  m_Layer: 0
+  - component: {fileID: 4522031775576639510}
+  - component: {fileID: -6832686920657222510}
+  m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +164,8 @@ MonoBehaviour:
     m_Bits: 64
   facingRight: 1
   visaoInimigo: {fileID: 0}
+  maxHealth: 1
+  animator: {fileID: 4522031775576639510}
 --- !u!68 &3210052970931421540
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -209,6 +213,52 @@ CapsuleCollider2D:
   m_Offset: {x: 0.014548302, y: -0.038796663}
   m_Size: {x: 1.5021915, y: 2.4624066}
   m_Direction: 0
+--- !u!95 &4522031775576639510
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3210052970931421566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3affb35a59bb0e40805f4d74fc57231, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!61 &-6832686920657222510
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3210052970931421566}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025105953, y: -1.2875177}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.06335926, y: 0.007067442}
+  m_EdgeRadius: 0
 --- !u!1 &3463442873496486610
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7308685531404704483}
   - component: {fileID: 4519918893264942110}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Light 2D (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,12 +11,16 @@ public class enemy : MonoBehaviour
     public bool facingRight = true;
     public EdgeCollider2D visaoInimigo;
     private bool bateunaparede;
+    public int maxHealth = 1;
+    int currentHealth;
+    public Animator animator;
+    
    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -53,18 +57,36 @@ public class enemy : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player"&& !collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
+        if (collision.tag == "Player" && !collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
         {
-            collision.gameObject.GetComponent<movievyolence>().setplayermorte(false);  
+            collision.gameObject.GetComponent<movievyolence>().setplayermorte(false);
         }
-        else if (collision.tag == "Player"&& collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
+        else if (collision.tag == "Player" && collision.gameObject.GetComponent<movievyolence>().taNaCaixa)
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<CapsuleCollider2D>(), GetComponent<CapsuleCollider2D>());
         }
         if (collision.tag == "parede") bateunaparede = true;
+
+    }
+    public void TomarDano(int damage)
+    {
+        currentHealth -= damage;
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Debug.Log("Enemy die");
+        animator.SetBool("morte", true);
+
+        GetComponent<CapsuleCollider2D>().enabled = false;
+        this.enabled = true;
+        GetComponent<EdgeCollider2D>().enabled = false;
+        GetComponent<enemy>().enabled = false;
         
-
-
 
     }
 }

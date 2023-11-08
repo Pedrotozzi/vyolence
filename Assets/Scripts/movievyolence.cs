@@ -25,6 +25,10 @@ public class movievyolence : MonoBehaviour
     public bool podeAbrirAPorta;
     public float gravidadeinicial;
     public bool podeEntrarNaEscada;
+    public Transform attackPoint;
+    public float attackRange = 0.2f;
+    public LayerMask enemyLayers;
+    public int danoDoAttack = 1;
 
     private bool playerControling = true;
 
@@ -48,6 +52,10 @@ public class movievyolence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Attack();
+        }
         if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaCaixa)
         {
             rb.velocity = Vector2.zero;
@@ -182,7 +190,21 @@ public class movievyolence : MonoBehaviour
     {
         podeEntrarNaCaixa = false;
     }
-   
-}
+    void Attack()
+    {
+        animator.SetTrigger("atacar");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<enemy>().TomarDano(danoDoAttack);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+}  
 
 
