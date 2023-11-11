@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class enemy : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class enemy : MonoBehaviour
     public int maxHealth = 1;
     int currentHealth;
     public Animator animator;
-    
-   
+    public GameObject luz;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -79,14 +82,13 @@ public class enemy : MonoBehaviour
     }
     void Die()
     {
-        Debug.Log("Enemy die");
         animator.SetBool("morte", true);
 
         GetComponent<CapsuleCollider2D>().enabled = false;
         this.enabled = true;
         GetComponent<EdgeCollider2D>().enabled = false;
         GetComponent<enemy>().enabled = false;
-        
+        Destroy(gameObject);
 
     }
 }
