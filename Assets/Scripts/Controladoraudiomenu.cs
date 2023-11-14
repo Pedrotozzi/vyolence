@@ -13,7 +13,7 @@ public class Controladoraudiomenu : MonoBehaviour
 
     [SerializeField] private Image muteImage;
 
-    [SerializeField] private AudioSource somclick;
+    
 
     public void LigarDesligarSom()
     {
@@ -34,8 +34,5 @@ public class Controladoraudiomenu : MonoBehaviour
     {
         fundoMusica.volume = value;
     }
-    public void Clickaudio()
-    {
-        somclick.enabled = true;
-    }
+   
 }
