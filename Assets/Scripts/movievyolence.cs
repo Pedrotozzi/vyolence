@@ -29,6 +29,7 @@ public class movievyolence : MonoBehaviour
     public float attackRange = 0.2f;
     public LayerMask enemyLayers;
     public int danoDoAttack = 1;
+    public bool podeatacar;
 
     private bool playerControling = true;
 
@@ -46,13 +47,13 @@ public class movievyolence : MonoBehaviour
         colider = GetComponent<CapsuleCollider2D>();
         caixaatual = null;
         gravidadeinicial = rb.gravityScale;
-            
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && (!taNaCaixa))
         {
             Attack();
         }
@@ -126,13 +127,13 @@ public class movievyolence : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.gameObject.CompareTag("escada"))
-        {   
+        {
             podeEntrarNaEscada = true;
             return;
         }
-        if (collision.gameObject.CompareTag("caixa"))           
+        if (collision.gameObject.CompareTag("caixa"))
         {
             podeEntrarNaCaixa = true;
             caixaatual = collision.gameObject.GetComponent<Caixa>();
@@ -144,6 +145,7 @@ public class movievyolence : MonoBehaviour
             portaatual = collision.gameObject.GetComponent<Porta>();
             return;
         }
+
 
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -157,16 +159,19 @@ public class movievyolence : MonoBehaviour
         {
             podeEntrarNaCaixa = false;
             caixaatual = null;
-            
+
         }
         if (collision.gameObject.CompareTag("porta"))
         {
             podeAbrirAPorta = false;
             portaatual = null;
-            
+
         }
-        
+
     }
+
+
+
     private void entrarnaescada()
     {
         rb.gravityScale = 0;
@@ -194,7 +199,7 @@ public class movievyolence : MonoBehaviour
     {
         animator.SetTrigger("atacar");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<enemy>().TomarDano(danoDoAttack);
         }
@@ -205,6 +210,7 @@ public class movievyolence : MonoBehaviour
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+    
 }  
 
 
