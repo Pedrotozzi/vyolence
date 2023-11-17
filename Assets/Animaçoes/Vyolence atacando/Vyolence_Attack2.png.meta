@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 24845115e9563bb4e9ca86112417eb05
+guid: 41b3457364c62c94f81b8d0ed911e46a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,148 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Vyolence_Attack_0
+      name: Vyolence_Attack2_0
       rect:
         serializedVersion: 2
-        x: 38
+        x: 5
         y: 0
-        width: 159
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 184
+        height: 256
+      alignment: 9
+      pivot: {x: 0.7198066, y: 0.5093138}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa646573d299cef4186d6e7556fa3d25
-      internalID: 178996718
+      spriteID: 025e2a83275e29342824dd02136ace95
+      internalID: -176894407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vyolence_Attack_1
+      name: Vyolence_Attack2_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 257
         y: 0
-        width: 256
-        height: 223
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 254
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5371865, y: 0.5130893}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 245a440e7d2be714698db57c56ac7c42
-      internalID: 1396249302
+      spriteID: 77281c68bedc85645b4b8d3a38f246bc
+      internalID: -1686481582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vyolence_Attack_2
+      name: Vyolence_Attack2_2
       rect:
         serializedVersion: 2
-        x: 512
-        y: 11
-        width: 253
-        height: 223
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 514
+        y: 0
+        width: 249
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5455506, y: 0.5141132}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76f042f93d0240e49bcd5b1c5d6776b5
-      internalID: 281151080
+      spriteID: c08d2d293d3f9fe40bedf6c576009aef
+      internalID: -1874387856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vyolence_Attack_3
+      name: Vyolence_Attack2_4
       rect:
         serializedVersion: 2
         x: 775
-        y: 11
-        width: 244
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 0
+        width: 245
+        height: 256
+      alignment: 9
+      pivot: {x: 0.53403246, y: 0.5105611}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fce5c523750f64409e9f05b66cf41c4
-      internalID: -1772781112
+      spriteID: 6909fe38cb024cc43b8d237ddde7864d
+      internalID: -997634264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vyolence_Attack_4
+      name: Vyolence_Attack2_5
       rect:
         serializedVersion: 2
-        x: 1033
-        y: 11
-        width: 242
-        height: 224
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1047
+        y: 0
+        width: 228
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5035914, y: 0.51277465}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dceb2692c57277347a2736922a12c015
-      internalID: -1917605444
+      spriteID: d12fd1f7558781448bb33327be0d0405
+      internalID: 1255052767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Vyolence_Attack_5
+      name: Vyolence_Attack2_6
       rect:
         serializedVersion: 2
-        x: 1291
-        y: 20
-        width: 240
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1288
+        y: 0
+        width: 243
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5341787, y: 0.5126269}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48d805568107c724b80f6fea4232b378
-      internalID: -1343752337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Vyolence_Attack_6
-      rect:
-        serializedVersion: 2
-        x: 1563
-        y: 20
-        width: 224
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1514d2792d2df664492abf7781230767
-      internalID: 1950958003
+      spriteID: 8c7181ad413332f488f5c94c952b4484
+      internalID: 439285485
       vertices: []
       indices: 
       edges: []
@@ -274,13 +253,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Vyolence_Attack_2: 281151080
-      Vyolence_Attack_6: 1950958003
-      Vyolence_Attack_0: 178996718
-      Vyolence_Attack_5: -1343752337
-      Vyolence_Attack_1: 1396249302
-      Vyolence_Attack_3: -1772781112
-      Vyolence_Attack_4: -1917605444
+      Vyolence_Attack2_8: -408926130
+      Vyolence_Attack2_11: 1437899280
+      Vyolence_Attack2_9: 972693494
+      Vyolence_Attack2_10: 668751894
+      Vyolence_Attack2_1: -1686481582
+      Vyolence_Attack2_2: -1874387856
+      Vyolence_Attack2_5: 1255052767
+      Vyolence_Attack2_0: -176894407
+      Vyolence_Attack2_6: 439285485
+      Vyolence_Attack2_7: -524999784
+      Vyolence_Attack2_3: 1350388452
+      Vyolence_Attack2_4: -997634264
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
