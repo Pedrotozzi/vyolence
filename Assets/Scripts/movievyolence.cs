@@ -30,6 +30,8 @@ public class movievyolence : MonoBehaviour
     public LayerMask enemyLayers;
     public int danoDoAttack = 1;
     public bool podeatacar;
+    public float cooldown;
+    float lastAttack;
 
     private bool playerControling = true;
 
@@ -53,36 +55,37 @@ public class movievyolence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.F) && (!taNaCaixa))
         {
             Attack();
         }
-        if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaCaixa)
+        if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaCaixa && PodeMover())
         {
             rb.velocity = Vector2.zero;
             AlternarEntradaNaCaixa();
             spriterd.enabled = !taNaCaixa;
             caixaatual.tanacaixa = taNaCaixa;
         }
-        else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta)
+        else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta && PodeMover())
         {
             portaatual.taAberta = !portaatual.taAberta;
         }
-        else if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaEscada)
+        else if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaEscada && PodeMover())
         {
             entrarnaescada();
         }
 
         taNoChao = Physics2D.OverlapCircle(detectaChao.position, 0.2f, oQueEhChao);
 
-        if (!naescada && Input.GetButtonDown("Jump") && taNoChao == true)
+        if (!naescada && Input.GetButtonDown("Jump") && taNoChao == true && PodeMover())
         {
             rb.velocity = Vector2.up * 8;
         }
 
 
 
-        if (playerControling)
+        if (playerControling && PodeMover())
         {
             if (!taNaCaixa)
             {
@@ -197,6 +200,11 @@ public class movievyolence : MonoBehaviour
     }
     void Attack()
     {
+        if (Time.time-lastAttack<cooldown)
+        {
+            return;
+        }
+        lastAttack = Time.time;
         animator.SetTrigger("atacar");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
@@ -210,7 +218,17 @@ public class movievyolence : MonoBehaviour
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-    
+    public bool PodeMover()
+    {
+        if (Time.time - lastAttack>0.6)
+        {
+           return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }  
 
 
