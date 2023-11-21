@@ -34,6 +34,7 @@ public class movievyolence : MonoBehaviour
     public float cooldown;
     float lastAttack;
     private Fimjogo telaFimJogo;
+    private AudioSource soundFx;
 
     private bool playerControling = true;
 
@@ -54,6 +55,7 @@ public class movievyolence : MonoBehaviour
         GameObject fimJogogameobject = GameObject.FindGameObjectWithTag("TelaFimJogo");
         this.telaFimJogo = fimJogogameobject.GetComponent<Fimjogo>();
         this.telaFimJogo.Esconder();
+        soundFx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -206,12 +208,14 @@ public class movievyolence : MonoBehaviour
     }
     void Attack()
     {
+
         if (Time.time-lastAttack<cooldown)
         {
             return;
         }
         lastAttack = Time.time;
         animator.SetTrigger("atacar");
+        soundFx.Play ();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {

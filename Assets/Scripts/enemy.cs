@@ -16,6 +16,7 @@ public class enemy : MonoBehaviour
     int currentHealth;
     public Animator animator;
     public GameObject luz;
+    private AudioSource soundFx;
 
 
 
@@ -23,6 +24,7 @@ public class enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        soundFx = GetComponent<AudioSource>();
         currentHealth = maxHealth;
     }
 
@@ -83,7 +85,7 @@ public class enemy : MonoBehaviour
     void Die()
     {
         animator.SetBool("morte", true);
-
+        soundFx.Play();
         GetComponent<CapsuleCollider2D>().enabled = false;
         this.enabled = true;
         GetComponent<EdgeCollider2D>().enabled = false;
