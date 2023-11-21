@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class movievyolence : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class movievyolence : MonoBehaviour
     public bool podeatacar;
     public float cooldown;
     float lastAttack;
+    private Fimjogo telaFimJogo;
 
     private bool playerControling = true;
 
@@ -49,7 +51,9 @@ public class movievyolence : MonoBehaviour
         colider = GetComponent<CapsuleCollider2D>();
         caixaatual = null;
         gravidadeinicial = rb.gravityScale;
-
+        GameObject fimJogogameobject = GameObject.FindGameObjectWithTag("TelaFimJogo");
+        this.telaFimJogo = fimJogogameobject.GetComponent<Fimjogo>();
+        this.telaFimJogo.Esconder();
     }
 
     // Update is called once per frame
@@ -120,6 +124,8 @@ public class movievyolence : MonoBehaviour
     {
         playerControling = set;
         animator.SetTrigger("morte");
+        
+        telaFimJogo.Exibir();
     }
     public void setplayerrun(bool set)
     {
