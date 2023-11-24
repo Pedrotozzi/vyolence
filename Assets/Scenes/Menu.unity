@@ -378,11 +378,11 @@ RectTransform:
   m_Father: {fileID: 1420006244}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 565, y: -315}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -50, y: -315}
   m_SizeDelta: {x: 600, y: 225}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &218067109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,11 +524,11 @@ RectTransform:
   m_Father: {fileID: 1420006244}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 565, y: -2.0406}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -50, y: -2.0405781}
   m_SizeDelta: {x: 600, y: 225}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &288070979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2333,10 +2333,10 @@ RectTransform:
   m_Father: {fileID: 1695192151}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1980, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673890830
 MonoBehaviour:
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2712,8 +2712,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fundoMusica: {fileID: 1318324387}
-  somLigadoSprite: {fileID: 21300000, guid: 36c55cd291a501141ad63f3c2758410d, type: 3}
-  somDesligadoSprite: {fileID: 21300000, guid: e438469f419e3b2428e345ee6b6cf91a, type: 3}
+  somLigadoSprite: {fileID: 21300000, guid: a5d26a8f4b81ecf4297841f0799da639, type: 3}
+  somDesligadoSprite: {fileID: 21300000, guid: d4b9719b1cf83eb46a2d584de02d6738, type: 3}
   muteImage: {fileID: 2072743520}
 --- !u!1 &1931212415
 GameObject:
@@ -2903,11 +2903,11 @@ RectTransform:
   m_Father: {fileID: 1420006244}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 565, y: 304}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -50, y: 304}
   m_SizeDelta: {x: 600, y: 225}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &2056624094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3046,14 +3046,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.32452828, g: 0.3426874, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36c55cd291a501141ad63f3c2758410d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5d26a8f4b81ecf4297841f0799da639, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3145,6 +3145,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 96.85339, y: -89.668915}
+  m_AnchoredPosition: {x: 108, y: -89.668945}
   m_SizeDelta: {x: 133.7067, y: 119.3378}
   m_Pivot: {x: 0.5, y: 0.5}
