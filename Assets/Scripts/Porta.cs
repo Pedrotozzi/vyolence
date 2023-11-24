@@ -11,6 +11,8 @@ public class Porta : MonoBehaviour
     private BoxCollider2D colider;
     public GameObject portafrente;
     private AudioSource soundfx;
+    public Color cor;
+    public SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class Porta : MonoBehaviour
         spriteRender.sprite = portaAberta;
         colider.enabled = false;
         portafrente.SetActive(true);
+        sprite.color = cor;
     }
     public void Audioporta()
     {

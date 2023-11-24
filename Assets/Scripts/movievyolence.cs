@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
+
 
 public class movievyolence : MonoBehaviour
 {
@@ -19,10 +21,12 @@ public class movievyolence : MonoBehaviour
     public float velocidadeescada;
     public bool taNaCaixa = false;
     public bool podeEntrarNaCaixa;
+    public bool podePegarBB;
     private SpriteRenderer spriterd;
     private CapsuleCollider2D colider;
     private Caixa caixaatual;
     public Porta portaatual;
+    public PegarBB BB;
     public bool podeAbrirAPorta;
     public float gravidadeinicial;
     public bool podeEntrarNaEscada;
@@ -35,7 +39,8 @@ public class movievyolence : MonoBehaviour
     float lastAttack;
     private Fimjogo telaFimJogo;
     private AudioSource soundFx;
-    
+    [SerializeField] private string nomeDoLevelDeJogo;
+
     private bool playerControling = true;
 
     private Animator animator;
@@ -80,6 +85,10 @@ public class movievyolence : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaEscada && PodeMover())
         {
             entrarnaescada();
+        }
+        //else if (Input.GetKeyDown(KeyCode.E) && PodePegarBB ())
+        {
+            SceneManager.LoadScene(nomeDoLevelDeJogo);
         }
 
         taNoChao = Physics2D.OverlapCircle(detectaChao.position, 0.2f, oQueEhChao);
@@ -156,6 +165,14 @@ public class movievyolence : MonoBehaviour
             portaatual = collision.gameObject.GetComponent<Porta>();
             return;
         }
+        if (collision.gameObject.CompareTag("BB"))
+        {
+            podePegarBB = true;
+            BB = collision.gameObject.GetComponent<PegarBB>();
+            return;
+        }
+
+
 
 
     }
@@ -177,6 +194,10 @@ public class movievyolence : MonoBehaviour
             podeAbrirAPorta = false;
             portaatual = null;
 
+        }
+        if (collision.gameObject.CompareTag("porta"))
+        {
+            podePegarBB = false;
         }
 
     }
@@ -239,6 +260,7 @@ public class movievyolence : MonoBehaviour
             return false;
         }
     }
+
 }  
 
 
