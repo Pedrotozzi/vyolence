@@ -35,7 +35,7 @@ public class movievyolence : MonoBehaviour
     float lastAttack;
     private Fimjogo telaFimJogo;
     private AudioSource soundFx;
-
+    
     private bool playerControling = true;
 
     private Animator animator;

@@ -10,12 +10,14 @@ public class Porta : MonoBehaviour
     public bool taAberta;
     private BoxCollider2D colider;
     public GameObject portafrente;
+    private AudioSource soundfx;
     // Start is called before the first frame update
     void Start()
     {
         spriteRender = GetComponent<SpriteRenderer>();
         colider = GetComponent<BoxCollider2D>();
         portafrente.SetActive (false);
+        soundfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +25,9 @@ public class Porta : MonoBehaviour
     {
         if (taAberta)
         {
+            
             PortaAberta();
+            Audioporta();
         }
         else
         {
@@ -42,6 +46,10 @@ public class Porta : MonoBehaviour
         spriteRender.sprite = portaAberta;
         colider.enabled = false;
         portafrente.SetActive(true);
+    }
+    public void Audioporta()
+    {
+        soundfx.Play();
     }
 
 
