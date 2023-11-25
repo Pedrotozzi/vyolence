@@ -26,7 +26,7 @@ public class movievyolence : MonoBehaviour
     private CapsuleCollider2D colider;
     private Caixa caixaatual;
     public Porta portaatual;
-    public PegarBB BB;
+    
     public bool podeAbrirAPorta;
     public float gravidadeinicial;
     public bool podeEntrarNaEscada;
@@ -39,7 +39,7 @@ public class movievyolence : MonoBehaviour
     float lastAttack;
     private Fimjogo telaFimJogo;
     private AudioSource soundFx;
-    [SerializeField] private string nomeDoLevelDeJogo;
+    
 
     private bool playerControling = true;
 
@@ -81,15 +81,21 @@ public class movievyolence : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta && PodeMover())
         {
             portaatual.taAberta = !portaatual.taAberta;
+
+            if (portaatual.taAberta)
+            {
+                portaatual.PortaAberta();
+            }
+            else
+            {
+                portaatual.PortaFechada();
+            }
         }
         else if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaEscada && PodeMover())
         {
             entrarnaescada();
         }
-        //else if (Input.GetKeyDown(KeyCode.E) && PodePegarBB ())
-        {
-            SceneManager.LoadScene(nomeDoLevelDeJogo);
-        }
+        
 
         taNoChao = Physics2D.OverlapCircle(detectaChao.position, 0.2f, oQueEhChao);
 
@@ -165,17 +171,8 @@ public class movievyolence : MonoBehaviour
             portaatual = collision.gameObject.GetComponent<Porta>();
             return;
         }
-        if (collision.gameObject.CompareTag("BB"))
-        {
-            podePegarBB = true;
-            BB = collision.gameObject.GetComponent<PegarBB>();
-            return;
-        }
-
-
-
-
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "escada")

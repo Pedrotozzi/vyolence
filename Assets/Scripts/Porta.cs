@@ -6,37 +6,24 @@ public class Porta : MonoBehaviour
 {
     public Sprite portaNormal;
     public Sprite portaAberta;
-    private SpriteRenderer spriteRender;
+    [SerializeField] private SpriteRenderer spriteRender;
+    [SerializeField] private SpriteRenderer spritefront;
     public bool taAberta;
     private BoxCollider2D colider;
     public GameObject portafrente;
     private AudioSource soundfx;
     public Color cor;
-    public SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
         spriteRender = GetComponent<SpriteRenderer>();
         colider = GetComponent<BoxCollider2D>();
-        portafrente.SetActive (false);
+        portafrente.SetActive(false);
         soundfx = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (taAberta)
-        {
-            
-            PortaAberta();
-            Audioporta();
-        }
-        else
-        {
-            PortaFechada();
 
-        }
-    }
     public void PortaFechada()
     {
         spriteRender.sprite = portaNormal;
@@ -48,10 +35,7 @@ public class Porta : MonoBehaviour
         spriteRender.sprite = portaAberta;
         colider.enabled = false;
         portafrente.SetActive(true);
-        sprite.color = cor;
-    }
-    public void Audioporta()
-    {
+        spritefront.color = cor;
         soundfx.Play();
     }
 
