@@ -37,13 +37,6 @@ public class Caixa : MonoBehaviour
     {
         spriteRender.sprite = caixaCheia;
     }
-   
-    
-    
-       
-
-    
-
 
 }
 

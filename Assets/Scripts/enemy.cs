@@ -16,7 +16,10 @@ public class enemy : MonoBehaviour
     int currentHealth;
     public Animator animator;
     public GameObject luz;
-    private AudioSource soundFx;
+    public AudioSource soundFx;
+    public Light2D Luz;
+    public BoxCollider2D box;
+    
 
 
 
@@ -26,6 +29,7 @@ public class enemy : MonoBehaviour
     {
         soundFx = GetComponent<AudioSource>();
         currentHealth = maxHealth;
+        box.enabled = false;
     }
 
     // Update is called once per frame
@@ -85,13 +89,13 @@ public class enemy : MonoBehaviour
     void Die()
     {
         animator.SetBool("morte", true);
-        soundFx.Play();
+        box.enabled = true;
         GetComponent<CapsuleCollider2D>().enabled = false;
         this.enabled = true;
         GetComponent<EdgeCollider2D>().enabled = false;
         GetComponent<enemy>().enabled = false;
-        Destroy(gameObject);
-
+        // Destroy(gameObject);
+        Luz.enabled = false;
     }
 }
 
