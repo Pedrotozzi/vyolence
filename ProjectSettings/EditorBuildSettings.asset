@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vyolence.unity
     guid: eca26a6c7909e1c439c2b7bef510573b
+  - enabled: 1
+    path: Assets/Scenes/CutScene 2.unity
+    guid: e433ae64c844962428118469de689baa
+  - enabled: 1
+    path: Assets/Scenes/VyolenceBB.unity
+    guid: e3a77ad80428b9e41afc13d224e866a8
   m_configObjects: {}

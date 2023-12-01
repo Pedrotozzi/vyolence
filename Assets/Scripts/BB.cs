@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Caixa : MonoBehaviour
+public class BB : MonoBehaviour
 {
-    //private BoxCollider2D 
     public Sprite caixaNormal;
     public Sprite caixaCheia;
     private SpriteRenderer spriteRender;
     public bool tanacaixa;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class Caixa : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {      
+    {
         if (tanacaixa)
         {
             CaixaCheia();
@@ -29,6 +28,7 @@ public class Caixa : MonoBehaviour
             CaixaNormal();
         }
     }
+
     public void CaixaNormal()
     {
         spriteRender.sprite = caixaNormal;
@@ -37,6 +37,4 @@ public class Caixa : MonoBehaviour
     {
         spriteRender.sprite = caixaCheia;
     }
-
 }
-

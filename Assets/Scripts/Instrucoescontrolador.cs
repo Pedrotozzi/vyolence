@@ -10,6 +10,7 @@ public class Instrucoescontrolador : MonoBehaviour
     public void Jogar()
     {
         SceneManager.LoadScene(nomeDoLevelDeJogo);
+        Time.timeScale = 1;
     }
 
 }

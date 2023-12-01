@@ -9,6 +9,7 @@ TagManager:
   - caixa
   - porta
   - TelaFimJogo
+  - caixafinal
   layers:
   - Default
   - TransparentFX
