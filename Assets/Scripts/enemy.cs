@@ -94,6 +94,7 @@ public class enemy : MonoBehaviour
         this.enabled = true;
         GetComponent<EdgeCollider2D>().enabled = false;
         GetComponent<enemy>().enabled = false;
+        GetComponent<AudioSource>().enabled = false;
         // Destroy(gameObject);
         Luz.enabled = false;
     }
