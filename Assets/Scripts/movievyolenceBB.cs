@@ -242,10 +242,24 @@ public class movievyolenceBB : MonoBehaviour
         animator.SetTrigger("atacarBB");
         soundFx.Play ();
         Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange,0 , enemyLayers);
-        foreach (Collider2D enemy in hitEnemies)
+        StartCoroutine(Danotempo(hitEnemies));
+        //foreach (Collider2D enemy in hitEnemies)
+
+        {
+            
+            // enemy.GetComponent<enemyBB>().TomarDano(danoDoAttack);
+        }
+    }
+    public float Espera;
+
+    private IEnumerator Danotempo(Collider2D[] collider2Ds)
+    {
+        yield return new WaitForSecondsRealtime(Espera);
+        foreach (Collider2D enemy in collider2Ds)
         {
             enemy.GetComponent<enemyBB>().TomarDano(danoDoAttack);
         }
+
     }
     private void OnDrawGizmosSelected()
     {

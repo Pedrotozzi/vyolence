@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46855f5c6d2706d4a8d41fdaedb695d4
+guid: a5856f4207fc67c48bbf9f19d2a32ac4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,127 +117,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VyBB_Idle_0
+      name: VyBB_Idle 1_0
       rect:
         serializedVersion: 2
         x: 70
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dac541fc08c21804e96ca88c6bd949c2
-      internalID: -20937191
+      spriteID: 241739d315945534f8d5281ecb1ee839
+      internalID: 1878752572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VyBB_Idle_1
+      name: VyBB_Idle 1_1
       rect:
         serializedVersion: 2
         x: 326
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d76b592d8a40be144af706600149806b
-      internalID: -129343915
+      spriteID: 7c3df333df11ab0469a29a566ade54be
+      internalID: 1905140478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VyBB_Idle_2
+      name: VyBB_Idle 1_2
       rect:
         serializedVersion: 2
         x: 582
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7337351f38964a40b23f0d8e38877d6
-      internalID: -1741960370
+      spriteID: 13385186c0091df4fa016c548f1209dd
+      internalID: -644763886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VyBB_Idle_3
+      name: VyBB_Idle 1_3
       rect:
         serializedVersion: 2
         x: 838
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c77841cd656e56749b90ffb515ec9709
-      internalID: -1269982658
+      spriteID: dafb98f3172c51249828f7dfb2bbb016
+      internalID: 780533174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VyBB_Idle_4
+      name: VyBB_Idle 1_4
       rect:
         serializedVersion: 2
         x: 1094
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edbdd780d63848449b268a3f5ceef4ee
-      internalID: 1184463067
+      spriteID: b6b4b53702500d447bb88ee47468a4dc
+      internalID: 2032995939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VyBB_Idle_5
+      name: VyBB_Idle 1_5
       rect:
         serializedVersion: 2
         x: 1350
         y: 0
-        width: 120
+        width: 121
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0c700844a5f2e944b08e00e223731fa
-      internalID: 337565668
+      spriteID: cd87681099e92f240b6de3911fd19e56
+      internalID: 776960892
       vertices: []
       indices: 
       edges: []
@@ -253,12 +253,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      VyBB_Idle_2: -1741960370
-      VyBB_Idle_1: -129343915
-      VyBB_Idle_3: -1269982658
-      VyBB_Idle_0: -20937191
-      VyBB_Idle_5: 337565668
-      VyBB_Idle_4: 1184463067
+      VyBB_Idle 1_4: 2032995939
+      VyBB_Idle 1_0: 1878752572
+      VyBB_Idle 1_5: 776960892
+      VyBB_Idle 1_3: 780533174
+      VyBB_Idle 1_1: 1905140478
+      VyBB_Idle 1_2: -644763886
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
