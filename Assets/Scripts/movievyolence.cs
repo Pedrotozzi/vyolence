@@ -32,7 +32,7 @@ public class movievyolence : MonoBehaviour
     public float gravidadeinicial;
     public bool podeEntrarNaEscada;
     public Transform attackPoint;
-    public float attackRange = 0.2f;
+    public Vector2 attackRange;
     public LayerMask enemyLayers;
     public int danoDoAttack = 1;
     public bool podeatacar;
@@ -74,10 +74,12 @@ public class movievyolence : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaCaixa && PodeMover())
         {
+            caixaatual.SomCaixa();
             rb.velocity = Vector2.zero;
             AlternarEntradaNaCaixa();
             spriterd.enabled = !taNaCaixa;
             caixaatual.tanacaixa = taNaCaixa;
+         
         }
         else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta && PodeMover())
         {
@@ -239,7 +241,7 @@ public class movievyolence : MonoBehaviour
         lastAttack = Time.time;
         animator.SetTrigger("atacar");
         soundFx.Play ();
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange,0 , enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<enemy>().TomarDano(danoDoAttack);
@@ -249,7 +251,7 @@ public class movievyolence : MonoBehaviour
     {
         if (attackPoint == null)
             return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawWireCube(attackPoint.position, attackRange);
     }
     public bool PodeMover()
     {

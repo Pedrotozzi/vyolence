@@ -74,10 +74,12 @@ public class movievyolenceBB : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && podeEntrarNaCaixa && PodeMover())
         {
+            caixaatual.SomCaixa();
             rb.velocity = Vector2.zero;
             AlternarEntradaNaCaixa();
             spriterd.enabled = !taNaCaixa;
             caixaatual.tanacaixa = taNaCaixa;
+
         }
         else if (Input.GetKeyDown(KeyCode.E) && podeAbrirAPorta && PodeMover())
         {
@@ -148,7 +150,7 @@ public class movievyolenceBB : MonoBehaviour
     public void setplayerrun(bool set)
     {
         playerControling = set;
-        animator.SetTrigger("correndo");
+        animator.SetTrigger("correndoBB");
 
     }
 
@@ -237,12 +239,12 @@ public class movievyolenceBB : MonoBehaviour
             return;
         }
         lastAttack = Time.time;
-        animator.SetTrigger("atacar");
+        animator.SetTrigger("atacarBB");
         soundFx.Play ();
-        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapBoxAll(attackPoint.position, attackRange,0 , enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<enemy>().TomarDano(danoDoAttack);
+            enemy.GetComponent<enemyBB>().TomarDano(danoDoAttack);
         }
     }
     private void OnDrawGizmosSelected()
