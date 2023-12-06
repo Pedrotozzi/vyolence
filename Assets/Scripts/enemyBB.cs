@@ -88,7 +88,7 @@ public class enemyBB : MonoBehaviour
     }
     void Die()
     {
-        animator.SetBool("morte", true);
+        animator.SetBool("morteBB", true);
         box.enabled = true;
         GetComponent<CapsuleCollider2D>().enabled = false;
         this.enabled = true;
