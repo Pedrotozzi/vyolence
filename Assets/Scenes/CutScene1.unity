@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!222 &1131587663 stripped
+CanvasRenderer:
+  m_CorrespondingSourceObject: {fileID: 3655617162028722596, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+  m_PrefabInstance: {fileID: 3655617161218311923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1790341995 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1342859772018327356, guid: e989877d37afa0244b7493af7444e9d5, type: 3}
@@ -303,6 +308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1342859772018327356, guid: e989877d37afa0244b7493af7444e9d5, type: 3}
+      propertyPath: botao
+      value: 
+      objectReference: {fileID: 1131587663}
     - target: {fileID: 1342859772018327357, guid: e989877d37afa0244b7493af7444e9d5, type: 3}
       propertyPath: m_Name
       value: ManagerCutScene
@@ -373,10 +382,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3655617162028722592, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3655617162028722598, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1790341995}
+    - target: {fileID: 3655617162028722599, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655617162028722599, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 3655617162897378407, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -477,6 +498,14 @@ PrefabInstance:
     - target: {fileID: 4089910486375804392, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
       propertyPath: m_Name
       value: videoplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089910486375804393, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 816a564f911d27243957a9a20915a44e, type: 3}
+    - target: {fileID: 4089910486375804393, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4089910486375804398, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
       propertyPath: m_RootOrder

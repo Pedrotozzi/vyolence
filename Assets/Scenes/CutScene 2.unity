@@ -191,6 +191,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: videoplayer
       objectReference: {fileID: 0}
+    - target: {fileID: 4089910486375804393, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 1289aabe16e318e4c8fba553e2650217, type: 3}
+    - target: {fileID: 4089910486375804393, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 0.305
+      objectReference: {fileID: 0}
     - target: {fileID: 4089910486375804398, guid: 4bfb31a6a3782894e9417b2a155656e7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -407,6 +415,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1342859772018327356, guid: e989877d37afa0244b7493af7444e9d5, type: 3}
+      propertyPath: botao
+      value: 
+      objectReference: {fileID: 1833673860}
+    - target: {fileID: 1342859772018327356, guid: e989877d37afa0244b7493af7444e9d5, type: 3}
       propertyPath: nomeDoLevelDeJogo
       value: VyolenceBB
       objectReference: {fileID: 0}
@@ -427,6 +439,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8456b649507d068499aefa993c18715d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!222 &1833673860 stripped
+CanvasRenderer:
+  m_CorrespondingSourceObject: {fileID: 3655617162028722596, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+  m_PrefabInstance: {fileID: 1956775882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1956775882
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3655617162028722592, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3655617162028722598, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -441,6 +462,14 @@ PrefabInstance:
     - target: {fileID: 3655617162028722598, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Jogar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655617162028722599, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655617162028722599, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 3655617162897378407, guid: c4888bbaf8024644b91c5aaca8e42fd0, type: 3}
       propertyPath: m_Name
