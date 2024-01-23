@@ -62,6 +62,7 @@ public class movievyolence : MonoBehaviour
         this.telaFimJogo = fimJogogameobject.GetComponent<Fimjogo>();
         this.telaFimJogo.Esconder();
         soundFx = GetComponent<AudioSource>();
+       
     }
 
     // Update is called once per frame
@@ -144,8 +145,9 @@ public class movievyolence : MonoBehaviour
     {
         playerControling = set;
         animator.SetTrigger("morte");
-        
+  
         telaFimJogo.Exibir();
+        
     }
     public void setplayerrun(bool set)
     {
